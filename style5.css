@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    background-size: cover;
+    color: white;
+    transition: background 0.5s ease;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #0072ff;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.search-box button:hover {
+    background-color: #00c6ff;
+}
+
+.unit-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.unit-toggle span {
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+/* Weather Info */
+.weather-info {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.weather-info img {
+    margin: 10px 0;
+}
+
+/* Forecast Section */
+.forecast-section {
+    margin-top: 20px;
+    display: none;
+}
+
+.forecast-day {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.forecast-day img {
+    width: 50px;
+}
+
+/* Graph Section */
+.graph-section {
+    margin-top: 20px;
+    display: none;
+}
+
+.graph-section canvas {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Switch for Temperature Unit */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0072ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}

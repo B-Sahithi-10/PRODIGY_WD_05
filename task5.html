@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather App</title>
+    <link rel="stylesheet" href="style5.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Weather App</h1>
+        <div class="search-box">
+            <input type="text" id="locationInput" placeholder="Enter city or location...">
+            <button onclick="fetchWeatherByInput()">Get Weather</button>
+            <button onclick="fetchWeatherByLocation()">Use My Location</button>
+        </div>
+        <div class="unit-toggle">
+            <span>Celsius</span>
+            <label class="switch">
+                <input type="checkbox" id="unitSwitch" onchange="toggleUnit()">
+                <span class="slider"></span>
+            </label>
+            <span>Fahrenheit</span>
+        </div>
+        <div class="weather-info" id="weatherInfo">
+            <!-- Weather information will be displayed here -->
+        </div>
+        <div class="forecast-section" id="forecastSection">
+            <!-- 5-day forecast will be displayed here -->
+        </div>
+        <div class="graph-section" id="graphSection">
+            <!-- Temperature trend graph will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script5.js"></script>
+</body>
+</html>
